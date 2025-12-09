@@ -335,10 +335,23 @@ main {
 @media print {
   body {
     background: white;
+    font-family: Arial, sans-serif;
   }
 
   main {
     padding: 0;
+  }
+
+  .hero,
+  .paper,
+  .section {
+    background: white !important;
+    box-shadow: none;
+  }
+
+  .hero::after,
+  .doodle {
+    display: none !important;
   }
 
   .paper,
