@@ -1,0 +1,1 @@
+uses agents.md for instructions use Aversan Inc._Resume for the resume

@@ -1,0 +1,355 @@
+:root {
+  --blue-50: #f5f8ff;
+  --blue-100: #e9f1ff;
+  --blue-200: #d5e5ff;
+  --blue-300: #b7d2ff;
+  --blue-500: #4f8ef5;
+  --blue-600: #2f6ac9;
+  --blue-700: #1e4f9e;
+  --blue-800: #12356c;
+  --ink: #0e233d;
+  --muted: #4a5b73;
+  --shadow: 0 12px 40px rgba(18, 53, 108, 0.16);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-quicksand), var(--font-baloo), system-ui, -apple-system, sans-serif;
+  background: var(--blue-50);
+  color: var(--ink);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--blue-700);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--blue-600);
+  text-decoration: underline;
+}
+
+main {
+  padding: 32px 20px 72px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.paper {
+  background: white;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 28px 40px;
+  background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 20%, rgba(79, 142, 245, 0.15), transparent 35%),
+    radial-gradient(circle at 85% 10%, rgba(18, 53, 108, 0.15), transparent 32%),
+    radial-gradient(circle at 75% 70%, rgba(47, 106, 201, 0.12), transparent 38%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 22px;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-family: var(--font-baloo), var(--font-quicksand), sans-serif;
+  font-size: clamp(34px, 3vw, 44px);
+  margin: 0;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+
+.role {
+  font-size: 16px;
+  color: var(--blue-800);
+  background: white;
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 14px;
+  border: 2px solid var(--blue-300);
+  box-shadow: 0 6px 20px rgba(18, 53, 108, 0.08);
+}
+
+.summary {
+  background: white;
+  padding: 18px 18px 18px 16px;
+  border-radius: 18px;
+  border: 2px solid var(--blue-200);
+  box-shadow: 0 8px 24px rgba(18, 53, 108, 0.12);
+  position: relative;
+}
+
+.summary::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1px dashed var(--blue-300);
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.summary p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.contact-card {
+  background: white;
+  border: 2px solid var(--blue-300);
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 24px rgba(18, 53, 108, 0.12);
+  display: grid;
+  gap: 8px;
+}
+
+.contact-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin: 0 0 6px;
+}
+
+.contact-item {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.download-button {
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(18, 53, 108, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(18, 53, 108, 0.32);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tag {
+  background: white;
+  border: 2px solid var(--blue-300);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  color: var(--blue-800);
+  box-shadow: 0 6px 16px rgba(18, 53, 108, 0.1);
+}
+
+.section {
+  padding: 28px 28px 8px;
+}
+
+.section-title {
+  font-family: var(--font-baloo), var(--font-quicksand), sans-serif;
+  font-size: 22px;
+  margin: 0 0 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue-800);
+}
+
+.section-title::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: var(--blue-500);
+  border-radius: 6px;
+  box-shadow: 6px 6px 0 rgba(18, 53, 108, 0.15);
+}
+
+.experience-list {
+  display: grid;
+  gap: 18px;
+}
+
+.experience-card {
+  background: white;
+  border: 2px solid var(--blue-200);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 18px rgba(18, 53, 108, 0.1);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.experience-title {
+  margin: 0;
+  font-weight: 700;
+  color: var(--blue-800);
+}
+
+.experience-meta {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.bullets {
+  margin: 10px 0 0 16px;
+  color: var(--muted);
+  padding-left: 12px;
+}
+
+.bullets li {
+  margin-bottom: 6px;
+}
+
+.education-list {
+  display: grid;
+  gap: 12px;
+}
+
+.edu-card {
+  background: white;
+  border: 2px solid var(--blue-200);
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 16px rgba(18, 53, 108, 0.08);
+}
+
+.edu-title {
+  margin: 0;
+  font-weight: 700;
+  color: var(--blue-800);
+}
+
+.edu-meta {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.webgl-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  filter: saturate(1.1);
+}
+
+.doodle {
+  position: absolute;
+  border: 2px dashed var(--blue-300);
+  border-radius: 16px;
+  opacity: 0.8;
+  transform: rotate(-2deg);
+}
+
+.doodle.small {
+  width: 52px;
+  height: 26px;
+}
+
+.doodle.medium {
+  width: 110px;
+  height: 40px;
+}
+
+.doodle.one {
+  top: 16px;
+  right: 16px;
+}
+
+.doodle.two {
+  bottom: 12px;
+  left: 18px;
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 18px 12px 52px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 40px 18px 28px;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .paper,
+  .hero,
+  .section {
+    box-shadow: none;
+    border: none;
+  }
+
+  .download-button,
+  .webgl-canvas {
+    display: none !important;
+  }
+}
